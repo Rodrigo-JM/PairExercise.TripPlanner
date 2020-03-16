@@ -1,5 +1,6 @@
 const mapboxgl = require("mapbox-gl");
 
+import markerFactory from './marker.js'
 
 mapboxgl.accessToken = 'pk.eyJ1IjoiYzNzYXIyMDciLCJhIjoiY2s1d3B6amViMXh5eDNrbWpjZWVqc3NqYSJ9.7vsEQ9O8osBtO9wdggls7Q';
  
@@ -10,18 +11,6 @@ const map = new mapboxgl.Map({
   style: "mapbox://styles/mapbox/streets-v10" // mapbox has lots of different map styles available.
 });
 
-const marker = document.createElement('div')
-
-marker.style.width = '30px';
-marker.style.height = '30px';
-marker.style.backgroundColor = 'red';
-marker.style.borderRadius = '20px'
-
-new mapboxgl.Marker(marker).setLngLat([-87.641, 41.895]).addTo(map);
-
-// const markerDomEl = document.createElement("div"); // Create a new, detached DIV
-// markerDomEl.style.width = "32px";
-// markerDomEl.style.height = "39px";
-// markerDomEl.style.backgroundImage = "url(http://i.imgur.com/WbMOfMl.png)";
-
-// new mapboxgl.Marker(markerDomEl).setLngLat([-74.009, 40.705]).addTo(map); // [-87.641, 41.895] for Chicago
+const marker = markerFactory('activity', [-74.009, 40.705], map)
+const marker1 = markerFactory('hotel', [-73.935242, 40.730610], map)
+const marker2 = markerFactory('restaurant', [-73.968285, 40.785091], map)
