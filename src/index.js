@@ -11,6 +11,15 @@ const map = new mapboxgl.Map({
   style: "mapbox://styles/mapbox/streets-v10" // mapbox has lots of different map styles available.
 });
 
-const marker = markerFactory('activity', [-74.009, 40.705], map)
-const marker1 = markerFactory('hotel', [-73.935242, 40.730610], map)
-const marker2 = markerFactory('restaurant', [-73.968285, 40.785091], map)
+
+const button = document.getElementById('submit');
+
+button.addEventListener('click', function(event) {
+
+    let lat = parseFloat(document.getElementById('latitude').value);
+    let long = parseFloat(document.getElementById('longitude').value);
+    let type = document.getElementById('type').value;
+
+    return markerFactory(type, [long, lat], map) 
+
+})

@@ -13,7 +13,7 @@ const markerFactory = (type, coordinates, map) => {
     marker.style.height = '30px';
     marker.style.backgroundImage = `url(${typeLinks[type]})`;
 
-    console.dir(marker)
+    // console.dir(marker)
     return new mapboxgl.Marker(marker).setLngLat(coordinates).addTo(map);
 
 }

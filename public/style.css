@@ -1,14 +1,40 @@
-* {
+/* * {
     box-sizing: border-box;
+} */
+
+#dashboard {
+    display: flex;
+   
 }
 
 body {
     margin: 0;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    background-color: #C1B5AD;
+    /* background-color: #C1B5AD; */
 }
 
+.markerFacBox {
+    margin: 0.3em;
+
+}
+#inputBox {
+    display: flex;
+    flex-flow: column;
+}
+
+#rightSection {
+    display: flex;
+    height: fit-content;
+    z-index: 2;
+    position: absolute;
+    right: 0;
+    background-color: hotpink;
+}
+
+
 #map {
+    /* flex: 2  2  60%; */
     height: 100vh;
-    width: 100vw;
+    width: 100%;
+    z-index: 1;
 }

@@ -9,6 +9,24 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="map"></div>
+    <div id="dashboard">
+        <div id="map"></div>
+        <div id="rightSection">
+            <div id="inputBox">
+                <h1 class="markerFacBox">Trip Planner</h1>
+                <input class="markerFacBox" type="text" placeholder="name">
+                <select class="markerFacBox" id="type">
+                    <h2>Select Your Type of Marker</h2>
+                    <option class="markerFacBox" value="activity">Activity</option>
+                    <option class="markerFacBox" value="hotel">hotel</option>
+                    <option class="markerFacBox" value="restaurant">Restaurant</option>
+    
+                </select>
+                <input class="markerFacBox" id="latitude" type="text" placeholder="Inser Latitude">
+                <input class="markerFacBox" id="longitude" type="text" placeholder="Insert Longitude">
+                <button class="markerFacBox" id="submit">Add Marker</button>
+            </div>
+        </div>
+    </div>   
 </body>
 </html>
